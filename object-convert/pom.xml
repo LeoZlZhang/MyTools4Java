@@ -2,18 +2,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>tools-box</artifactId>
+        <groupId>leo</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>leo</groupId>
-    <artifactId>tools-box</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>not-organized</module>
-        <module>object-convert</module>
-    </modules>
-
-    <packaging>pom</packaging>
-
+    <artifactId>object-convert</artifactId>
     <build>
         <plugins>
             <plugin>
@@ -27,4 +23,17 @@
         </plugins>
     </build>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20090211</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-mapper-asl</artifactId>
+            <version>1.9.13</version>
+        </dependency>
+    </dependencies>
 </project>
